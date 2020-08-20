@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import fire from './config/Fire';
+import LoginRegister from './components/LoginRegister';
+import Dashboard from './components/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
 class App extends Component {
 
@@ -28,7 +31,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        {/* video is at 18:16, continue on from there */}
+        {this.state.user ? (<Dashboard />) : (<LoginRegister />)}
       </div>
     );
   }
