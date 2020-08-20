@@ -11,7 +11,7 @@ class LoginRegister extends Component {
             email: '',
             password: '',
             fireErrors: '',
-            formTitle: 'Search for a recipie...',
+            formTitle: 'Search for a recipie or the weather...',
             loginBtn: true
         };
     }
@@ -37,7 +37,7 @@ class LoginRegister extends Component {
     }
 
     getAtion = action => {
-        if(action == 'reg'){
+        if(action === 'reg'){
             this.setState({formTitle: 'Register New User', loginBtn: false, fireErrors: ''})
         }else{
             this.setState({formTitle: 'Login', loginBtn: true, fireErrors: ''})
@@ -60,7 +60,7 @@ class LoginRegister extends Component {
       <div className="form_block">
         <div className="body text-center">
             <form className="form-signin">
-                <img src={Image} className="logo" width="70" height="70" alt="cam"/>
+                <img src={Image} className="logo" width="70" height="70" alt="logo"/>
 
                 <h1 className="h3 mb-3 font-weight-normal">Recipie Hunt</h1>
 
